@@ -1,0 +1,43 @@
+import React from 'react';
+import './App.css';
+import './App.scss';
+
+function App() {
+  const student = {
+    name: 'Sai Balaji',
+    course: 'B.Tech CSE',
+    cgpa: 9.44
+  };
+
+  return (
+    <div className="container">
+      <h1>Student Details</h1>
+      <p>Name: {student.name}</p>
+      <p>Course: {student.course}</p>
+      <p>CGPA: {student.cgpa}</p>
+    </div>
+  );
+}
+
+export default App;
+App.css:
+.container {
+  text-align: center;
+  background-color: lightblue;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+App.scss
+$heading-color: darkblue;
+
+.container {
+  h1 {
+    color: $heading-color;
+  }
+
+  p {
+    font-size: 18px;
+    color: black;
+  }
+}
+npm install saas
