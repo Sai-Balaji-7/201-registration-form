@@ -1,0 +1,33 @@
+// 9(b) MongoDB Queries on Records
+
+// Insert sample records
+db.students.insertMany([
+    { name: "Ravi", age: 20, marks: 85 },
+    { name: "Sita", age: 21, marks: 92 },
+    { name: "Arjun", age: 19, marks: 78 }
+]);
+
+// 1. Find all records
+db.students.find();
+
+// 2. Find records with a condition
+db.students.find({ age: 20 });
+
+// 3. Limit the output to 2 records
+db.students.find().limit(2);
+
+// 4. Sort records by marks in descending order
+db.students.find().sort({ marks: -1 });
+
+// 5. Create an index on the name field
+db.students.createIndex({ name: 1 });
+
+// 6. Aggregate records to calculate average marks
+db.students.aggregate([
+    {
+        $group: {
+            _id: null,
+            averageMarks: { $avg: "$marks" }
+        }
+    }
+]);
