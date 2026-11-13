@@ -1,0 +1,8 @@
+http://localhost:3000/about This is the About page
+http://localhost:3000/user/101 User ID: 101
+http://localhost:3000/search?name=Ravi Search query: Ravi
+http://localhost:3000/build Generated URL: http://localhost:3000/user/101
+Result: Thus, route handling, route parameters, query parameters, and URL building were implemented successfully using ExpressJS.
+Install Express: npm install express
+Run the program: node app.js
+Use Postman or Thunder Client to test the HTTP methods.
