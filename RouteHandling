@@ -1,0 +1,32 @@
+
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Welcome to ExpressJS');
+});
+
+// Handling routes
+app.get('/about', (req, res) => {
+    res.send('This is the About page');
+});
+
+// Route parameters
+app.get('/user/:id', (req, res) => {
+    res.send('User ID: ' + req.params.id);
+});
+
+// Query parameters
+app.get('/search', (req, res) => {
+    res.send('Search query: ' + req.query.name);
+});
+
+// URL building
+app.get('/build', (req, res) => {
+    const url = req.protocol + '://' + req.get('host') + '/user/101';
+    res.send('Generated URL: ' + url);
+});
+
+app.listen(3000, () => {
+    console.log('Server running at http://localhost:3000');
+});
