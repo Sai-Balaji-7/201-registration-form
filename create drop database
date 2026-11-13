@@ -1,0 +1,19 @@
+// 9(a) Create and Drop Databases and Collections
+
+// 1. Create or switch to a database
+use college
+
+// 2. Create a collection
+db.createCollection("students");
+
+// 3. Display all databases
+show dbs
+
+// 4. Display collections in the current database
+show collections
+
+// 5. Drop a collection
+db.students.drop();
+
+// 6. Drop the current database
+db.dropDatabase();
