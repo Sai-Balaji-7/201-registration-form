@@ -1,0 +1,49 @@
+1. Insert a document
+
+{
+  acknowledged: true,
+  insertedIds: [ ObjectId('...') ]
+}
+
+2. Display all documents
+
+[
+  {
+    _id: ObjectId('...'),
+    id: 1,
+    name: 'Ravi',
+    age: 20,
+    marks: 85
+  }
+]
+
+3. Find a particular document
+
+[
+  {
+    _id: ObjectId('...'),
+    id: 1,
+    name: 'Ravi',
+    age: 20,
+    marks: 85
+  }
+]
+
+4. Update a document
+
+{
+  acknowledged: true,
+  matchedCount: 1,
+  modifiedCount: 1
+}
+
+5. Remove a document
+
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+
+6. Display remaining documents
+
+[]
