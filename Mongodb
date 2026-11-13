@@ -1,0 +1,198 @@
+### 8\. (a) ReactJS Program for Rendering Lists
+
+Aim: To write a ReactJS program to render a list of items using the `map()` method.
+
+Program (`App.jsx`):
+
+```jsx
+import React from 'react';
+
+function App() {
+  const fruits = ['Apple', 'Mango', 'Orange', 'Banana'];
+
+  return (
+    <div>
+      <h2>List of Fruits</h2>
+      <ul>
+        {fruits.map((fruit, index) => (
+          <li key={index}>{fruit}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+```
+
+Execution:
+
+* Create a React project using Vite.
+
+* Save the code in `src/App.jsx`.
+
+* Run `npm install` and `npm run dev`.
+
+Output:
+
+### List of Fruits
+
+* Apple
+
+* Mango
+
+* Orange
+
+* Banana
+
+Result: Thus, a list of fruits was successfully rendered using the `map()` method in ReactJS.
+
+### 8\. (b) MongoDB Queries to Perform CRUD Operations
+
+Aim: To perform Create, Read, Update, and Delete (CRUD) operations on MongoDB documents using `insert()`, `find()`, `update()`, and `remove()`.
+
+Assume the collection name is `students`.
+
+1\. Create — Insert a document
+
+```javascript
+db.students.insert({
+  id: 1,
+  name: "Ravi",
+  age: 20
+})
+```
+
+2\. Read — Retrieve documents
+
+```javascript
+db.students.find()
+```
+
+To find a specific student:
+
+```javascript
+db.students.find({ name: "Ravi" })
+```
+
+3\. Update — Modify a document
+
+```javascript
+db.students.update(
+  { name: "Ravi" },
+  { $set: { age: 21 } }
+)
+```
+
+4\. Delete — Remove a document
+
+```javascript
+db.students.remove({ name: "Ravi" })
+```
+
+Result: Thus, CRUD operations were performed successfully using MongoDB queries.
+
+Note: These are the traditional MongoDB methods often used in lab syllabuses. In modern MongoDB applications, prefer `insertOne()`, `find()`, `updateOne()`, and `deleteOne()`.
+
+### 9\. (a) MongoDB Queries to Create and Drop Databases and Collections
+
+Aim: To create and drop databases and collections using MongoDB commands.
+
+1\. Create or switch to a database
+
+```javascript
+use college
+```
+
+2\. Create a collection
+
+```javascript
+db.createCollection("students")
+```
+
+3\. Display all databases
+
+```javascript
+show dbs
+```
+
+4\. Display all collections
+
+```javascript
+show collections
+```
+
+5\. Drop a collection
+
+```javascript
+db.students.drop()
+```
+
+6\. Drop the current database
+
+```javascript
+db.dropDatabase()
+```
+
+Result: Thus, databases and collections were created, displayed, and dropped successfully using MongoDB commands.
+
+### 9\. (b) MongoDB Queries Using `find()`, `limit()`, `sort()`, `createIndex()`, and `aggregate()`
+
+Aim: To retrieve, limit, sort, index, and aggregate records in MongoDB.
+
+Assume the `students` collection contains the following documents:
+
+```javascript
+db.students.insertMany([
+  { name: "Ravi", age: 20, marks: 85 },
+  { name: "Sita", age: 21, marks: 92 },
+  { name: "Arjun", age: 19, marks: 78 }
+])
+```
+
+1\. `find()` — Display all records
+
+```javascript
+db.students.find()
+```
+
+2\. `limit()` — Display only two records
+
+```javascript
+db.students.find().limit(2)
+```
+
+3\. `sort()` — Sort records by marks in descending order
+
+```javascript
+db.students.find().sort({ marks: -1 })
+```
+
+Use `1` for ascending order and `-1` for descending order.
+
+4\. `createIndex()` — Create an index on the name field
+
+```javascript
+db.students.createIndex({ name: 1 })
+```
+
+5\. `aggregate()` — Calculate the average marks
+
+```javascript
+db.students.aggregate([
+  {
+    $group: {
+      _id: null,
+      averageMarks: { $avg: "$marks" }
+    }
+  }
+])
+```
+
+Sample output for aggregation:
+
+```javascript
+{ _id: null, averageMarks: 85 }
+```
+
+Result: Thus, MongoDB queries were executed successfully to find, limit, sort, index, and aggregate student records.
