@@ -1,0 +1,26 @@
+1. Switch to database
+
+switched to db college
+
+2. Create collection
+
+{ ok: 1 }
+
+3. Display all databases
+
+admin
+config
+local
+college
+
+4. Display collections
+
+students
+
+5. Drop collection
+
+true
+
+6. Drop database
+
+{ ok: 1, dropped: "college" }
