@@ -1,0 +1,28 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+
+function App() {
+  return React.createElement(
+    'div',
+    null,
+    React.createElement('h1', null, 'Hello World!'),
+    React.createElement('p', null, 'Welcome to ReactJS')
+  );
+}
+
+createRoot(document.getElementById('root')).render(<App />);
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>React Example</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
+explanation
+Create a React project using npm create vite@latest myapp -- --template react.
+Place the program in src/App.jsx and ensure src/main.jsx imports and renders App.
+Run npm install and npm run dev.
