@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Page</title>
+</head>
+<body>
+    <h1>Welcome, <%= name %></h1>
+    <p>Course: <%= course %></p>
+</body>
+</html>
+Install packages: npm install express ejs
+Create a folder named views and save home.ejs inside it.
+Run: node app.js
+Open http://localhost:3000 in the browser.
+Output:
