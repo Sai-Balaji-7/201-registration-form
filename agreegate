@@ -1,0 +1,32 @@
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('...'),
+    '1': ObjectId('...'),
+    '2': ObjectId('...')
+  }
+}
+[
+  { _id: ObjectId('...'), name: 'Ravi', age: 20, marks: 85 },
+  { _id: ObjectId('...'), name: 'Sita', age: 21, marks: 92 },
+  { _id: ObjectId('...'), name: 'Arjun', age: 19, marks: 78 }
+]
+[
+  { _id: ObjectId('...'), name: 'Ravi', age: 20, marks: 85 }
+]
+[
+  { _id: ObjectId('...'), name: 'Ravi', age: 20, marks: 85 },
+  { _id: ObjectId('...'), name: 'Sita', age: 21, marks: 92 }
+]
+[
+  { _id: ObjectId('...'), name: 'Sita', age: 21, marks: 92 },
+  { _id: ObjectId('...'), name: 'Ravi', age: 20, marks: 85 },
+  { _id: ObjectId('...'), name: 'Arjun', age: 19, marks: 78 }
+]
+name_1
+[
+  {
+    _id: null,
+    averageMarks: 85
+  }
+]
