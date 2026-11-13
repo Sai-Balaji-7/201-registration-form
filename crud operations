@@ -1,0 +1,27 @@
+// 8(b) MongoDB CRUD Operations
+
+// 1. Insert a document
+db.students.insert({
+    id: 1,
+    name: "Ravi",
+    age: 20,
+    marks: 85
+});
+
+// 2. Display all documents
+db.students.find();
+
+// 3. Find a particular document
+db.students.find({ name: "Ravi" });
+
+// 4. Update a document
+db.students.update(
+    { name: "Ravi" },
+    { $set: { age: 21 } }
+);
+
+// 5. Remove a document
+db.students.remove({ name: "Ravi" });
+
+// Display remaining documents
+db.students.find();
